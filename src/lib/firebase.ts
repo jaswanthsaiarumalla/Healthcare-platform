@@ -2,7 +2,7 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyAMKD4n_X98ShNqSiBNFqgeSiPzYYzHnrQ",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "your firebase api key",
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "mock-domain.firebaseapp.com",
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "mock-project",
   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "mock-bucket.appspot.com",
