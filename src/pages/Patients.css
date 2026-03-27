@@ -1,0 +1,213 @@
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.search-bar {
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+
+.patients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.patient-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.patient-card-header {
+  height: 80px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(14, 165, 233, 0.1));
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.patient-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  position: absolute;
+  bottom: -36px;
+  border: 4px solid var(--surface);
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+}
+
+.status-dot {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--surface);
+}
+
+.status-dot.stable { background-color: var(--success); }
+.status-dot.critical { background-color: var(--danger); }
+.status-dot.recovering { background-color: var(--warning); }
+
+.patient-card-body {
+  padding: 3rem 1.5rem 1.5rem;
+  text-align: center;
+  flex: 1;
+}
+
+.patient-card-body h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.diagnosis {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.patient-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background: var(--surface-active);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detail-item span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.detail-item strong {
+  font-size: 0.875rem;
+  color: var(--text-main);
+}
+
+.patient-card-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--surface-hover);
+}
+
+.last-visit {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.view-btn {
+  color: var(--primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.view-btn:hover {
+  text-decoration: underline;
+}
+
+
+.patients-list-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.patients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patients-table th,
+.patients-table td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.patients-table th {
+  background-color: var(--surface-hover);
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.patients-table tbody tr {
+  transition: background var(--transition-fast);
+}
+
+.patients-table tbody tr:hover {
+  background-color: var(--surface-hover);
+}
+
+.patients-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-patient-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.table-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.table-subtext {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.patient-status-badge.stable {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: var(--success);
+}
+.patient-status-badge.recovering {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border);
+}
